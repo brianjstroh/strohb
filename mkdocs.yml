@@ -1,0 +1,10 @@
+site_name: strohb
+repo_url: https://github.com/brianjstroh/strohb/
+site_url: https://www.strohb.com
+edit_uri: https://github.com/brianjstroh/strohb/docs/
+site_description: A playground for data engineers.
+site_author: Brian Stroh <brianjstroh@gmail.com>
+nav:
+  - Home: 'index.md'
+# extra_css:
+theme: dracula

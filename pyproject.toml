@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "strohb"
+version = "0.0.0"
+description = "Playground for data engineers"
+authors = ["Brian Stroh <brianjstroh@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+mypy = "^1.8.0"
+pre-commit = "^3.6.0"
+ruff = "^0.1.13"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5.3"
+mkdocs-dracula-theme = "^1.0.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_untyped_defs = true
+
+[tool.ruff]
+fix = true
+target-version = "py311"
+# Same as Black.
+line-length = 88
+indent-width = 2
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"

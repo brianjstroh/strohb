@@ -14,11 +14,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.11" # Specify the Python version
+          python-version: "3.11"
 
       - name: Install docs dependencies
         run: |
           pip install poetry
+          poetry config virtualenvs.create false
           poetry install --only=docs --no-root
 
       - name: Build MkDocs site

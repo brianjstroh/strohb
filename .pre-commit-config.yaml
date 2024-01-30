@@ -7,26 +7,34 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+        files: ^(?!.*\.aws/).*\.(yaml|yml)$
       - id: check-added-large-files
   - repo: local
     hooks:
-      - id: black
-        name: black
-        entry: black
-        language: system
-        types: [python]
       - id: codespell
         name: codespell
         entry: codespell
         language: system
         types: [python]
+      - id: ruff
+        name: ruff-format
+        entry: ruff
+        language: system
+        types: [python]
+        args: [format]
+      - id: cfn-lint
+        name: cloudformation-lint
+        entry: cfn-lint
+        language: system
+        files: ^\.aws/.*\.(yaml|yml|json)$
+      - id: ruff
+        name: ruff-lint
+        entry: ruff
+        language: system
+        types: [python]
+        args: [--fix]
       - id: mypy
         name: mypy
         entry: mypy
-        language: system
-        types: [python]
-      - id: ruff
-        name: ruff
-        entry: ruff
         language: system
         types: [python]

@@ -9,6 +9,7 @@ nav:
   - Blog:
     - January 17, 2024: blog/2024/1/17.md
     - January 25, 2024: blog/2024/1/25.md
+    - January 31, 2024: blog/2024/1/31.md
 theme:
   name: material
   palette:
